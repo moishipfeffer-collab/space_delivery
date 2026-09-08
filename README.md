@@ -61,8 +61,9 @@ The project uses MySQL with Peewee ORM.
 
 
 
-# Developers:
-David Kalaora
-Moishi Pfeffer
-
 Each delivery belongs to the user who created it, so users can only manage their own deliveries.
+
+
+# Developers:
+David Kalaora.
+Moishi Pfeffer.
