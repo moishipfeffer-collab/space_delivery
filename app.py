@@ -68,7 +68,8 @@ def menu():
 
                     elif choice == "Show my deliveries":
                         result = get_user_deliveries(user)
-                        print(result)
+                        if result:
+                            print(result)
 
                     elif choice == "Update delivery status":
                         new_status=get_new_status()
