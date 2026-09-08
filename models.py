@@ -33,4 +33,3 @@ def creat_table():
     db.create_tables([User,Delivery])
     db.close()
 
-creat_table()
