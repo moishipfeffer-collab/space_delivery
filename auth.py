@@ -2,17 +2,19 @@ import bcrypt
 from models import User
 
 def register_user(username: str, password: str) -> User:
-    if not username.strip():
-        raise ValueError("Username must not be empty!")
+    try:
+        if not username.strip():
+            raise ValueError("Username must not be empty!")
 
-    if len(password)< 6:
-        raise ValueError("password must be at least 6 characters!")
+        if len(password)< 6:
+            raise ValueError("password must be at least 6 characters!")
 
-    existing_user = User.get_or_none(User.username == username)
+        existing_user = User.get_or_none(User.username == username)
 
-    if existing_user:
-        raise ValueError("username already exists!")
-
+        if existing_user:
+            raise ValueError("username already exists!")
+    except ValueError as error:
+        print(f"You did not Register {error}")
 
     password_hash = bcrypt.hashpw(
         password.encode("utf-8"),
