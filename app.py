@@ -14,7 +14,7 @@ def get_package_id():
     return package_id
 
 def get_new_status():
-    new_status=input("enter new staus: ")
+    new_status=input("enter new status: ")
     return new_status
 
 def menu():
@@ -71,8 +71,8 @@ def menu():
                         print(result)
 
                     elif choice == "Update delivery status":
-                        id=get_package_id()
                         new_status=get_new_status()
+                        id=get_package_id()
                         if update_delivery_status(user,id,new_status):
                             print("delivery updated succesfully")
                         else:
@@ -87,6 +87,8 @@ def menu():
                     
                     elif choice == "Logout":
                         break
+            else:
+                print("not valid name or password!")
                     
 
         elif choice == "Exit":
