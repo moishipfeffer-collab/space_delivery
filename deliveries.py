@@ -45,6 +45,7 @@ def delete_delivery(user: User,delivery_id:int):
         (Delivery.id==delivery_id)and(Delivery.owner==user)
     )
     if not delivery:
+        print("delivery not found!")
         return False
     delivery.delete_instance()
     return True
