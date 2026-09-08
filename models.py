@@ -27,9 +27,8 @@ class Delivery(BaseModel):
     class Meta:
         table_name="deliveries"
 
-
-def creat_table():
-    db.connect()
+def initialize_database():
+    db.connect(reuse_if_open=True)
     db.create_tables([User,Delivery])
     db.close()
 
