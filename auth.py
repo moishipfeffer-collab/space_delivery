@@ -14,7 +14,8 @@ def register_user(username: str, password: str) -> User:
         if existing_user:
             raise ValueError("username already exists!")
     except ValueError as error:
-        print(f"You did not Register {error}")
+        print(f"You did not Register: {error}")
+        return
 
     password_hash = bcrypt.hashpw(
         password.encode("utf-8"),
