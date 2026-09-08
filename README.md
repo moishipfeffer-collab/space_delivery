@@ -59,4 +59,10 @@ The program will open in the terminal and show the menu.
 
 The project uses MySQL with Peewee ORM.
 
+
+
+# Developers:
+David Kalaora
+Moishi Pfeffer
+
 Each delivery belongs to the user who created it, so users can only manage their own deliveries.
